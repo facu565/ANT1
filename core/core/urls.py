@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from jet_django.urls import jet_urls
+from django.conf.urls import include
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^jet_api/', include(jet_urls)),
 ]
